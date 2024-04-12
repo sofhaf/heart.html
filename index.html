@@ -1,0 +1,79 @@
+<script>
+    // THIS HTML FILE MAKES A WEBPAGE WITH PIXEL ART. 
+    // THE COLOR, SIZE, AND POSITION OF THE PIXELS AND 
+    // THE BACKGROUND COLOR OF THE DOCUMENT CAN BE EDITED.
+
+    // DIRECTLY BELOW ARE VARAIABLES IVE CREATED. THEY HOLD INFORMATION,
+    // AND IVE NAMED EACH OF THEM. RIGHT NOW, THEY HOLD HEX COLOR CODES 
+    // FOR MY COLOR NAMES. 
+    const pink = '#c271a2'
+    const black = '#2E2222'
+    const standard = '#213340'
+  
+    // THESE ARE ALSO VARIABLES AND THEY CONTROL THE OVERALL POSITION
+    // IN THE FUNCTION FOR OUR PIXELS.
+    let xbunny = 55
+    let ybunny = 55
+
+    // HERE IS THE FUNCTION THAT CREATES THE RULES FOR OUR PIXELS. 
+    function createPixel(backgroundColour, xpixel, ypixel, hpixel, wpixel, layer) {
+        let xpixels = xbunny + xpixel
+        let ypixels = ybunny + ypixel
+        const pixel = document.createElement("div")
+        pixel.className = 'square'
+        document.body.appendChild(pixel)
+        pixel.style.position = 'absolute'
+        pixel.style.top = xpixels
+        pixel.style.left = ypixels
+        pixel.style.background = backgroundColour
+        pixel.style.height = hpixel
+        pixel.style.width = wpixel
+        pixel.style.zIndex = layer
+    }
+
+    // THIS FUNCTION IS WHERE WE CREATE OUR WEBPAGE DESIGNS
+    function setup () {
+        // BELOW CONTROLS THE BACKGROUND COLOR OF THIS WEBPAGE
+        document.body.style.backgroundColor = pink
+    
+        // BELOW ARE 27 BLACK PIXELS THAT FORM A HEART SHAPE
+        ////  make edits below in the parentheses! 
+        ////  There are six data points to edit: 
+        ////  first is color of the pixel, 
+        ////  second is position from the top of the webage, 
+        ////  third is the position from the left of the webpage, 
+        ////  fourth is the height of the pixel, 
+        ////  fifth is the width of the pixel, and finally the
+        ////  sixth is the z-order of the pixel (ordering of overlapping two-dimensional objects)
+        createPixel(black, 55, 154, 11, 11, 0)
+        createPixel(black, 55, 165, 11, 11, 0)
+        createPixel(black, 55, 187, 11, 11, 0)
+        createPixel(black, 55, 198, 11, 11, 0)
+        createPixel(black, 66, 143, 11, 11, 0)
+        createPixel(black, 66, 154, 11, 11, 0)
+        createPixel(black, 66, 165, 11, 11, 0)
+        createPixel(black, 66, 176, 11, 11, 0)
+        createPixel(black, 66, 187, 11, 11, 0)
+        createPixel(black, 66, 198, 11, 11, 0)
+        createPixel(black, 66, 208, 11, 11, 0)
+        createPixel(black, 77, 143, 11, 11, 0)
+        createPixel(black, 77, 154, 11, 11, 0)
+        createPixel(black, 77, 165, 11, 11, 0)
+        createPixel(black, 77, 176, 11, 11, 0)
+        createPixel(black, 77, 187, 11, 11, 0)
+        createPixel(black, 77, 198, 11, 11, 0)
+        createPixel(black, 77, 208, 11, 11, 0)
+        createPixel(black, 88, 154, 11, 11, 0)
+        createPixel(black, 88, 165, 11, 11, 0)
+        createPixel(black, 88, 176, 11, 11, 0)
+        createPixel(black, 88, 187, 11, 11, 0)
+        createPixel(black, 88, 198, 11, 11, 0)
+        createPixel(black, 99, 165, 11, 11, 0)
+        createPixel(black, 99, 176, 11, 11, 0)
+        createPixel(black, 99, 187, 11, 11, 0)
+        createPixel(black, 110, 176, 11, 11, 0)
+    }
+
+        window.addEventListener('load', setup)
+
+    </script>
